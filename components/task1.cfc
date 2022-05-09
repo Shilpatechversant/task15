@@ -7,6 +7,4 @@
    </cfquery>
    <cfreturn getCustomers>
  </cffunction>
-
-
 </cfcomponent>

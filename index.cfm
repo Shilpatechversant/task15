@@ -22,38 +22,37 @@
                         <hr>
                         <p>Multiplication 2 arguments using cfinvoke - Multiply (1,2):</p>
                         <br>
-                        <cfinvoke component="components.multiply" method="multiply" returnvariable="process">
-                            <cfoutput>
+                        <cfinvoke component="components.multiply" method="multiply" returnvariable="res">                         
                                 <cfinvokeargument name="a" value="1">
-                                <cfinvokeargument name="b" value="2">
-                            </cfoutput>
+                                <cfinvokeargument name="b" value="2">                      
                         </cfinvoke>
+                        <cfoutput>#res#</cfoutput>
                         <hr>
                         <p>Multiplication 3 arguments using cfinvoke- Multiply (1,2,3):</p>
                         <br>
-                        <cfinvoke component="components.multiply" method="multiply" returnvariable="process">
-                            <cfoutput>
+                        <cfinvoke component="components.multiply" method="multiply" returnvariable="res1">                       
                                 <cfinvokeargument name="a" value="1">
                                 <cfinvokeargument name="b" value="2">
-                                <cfinvokeargument name="c" value="3">
-                            </cfoutput>
+                                <cfinvokeargument name="c" value="3">                       
                         </cfinvoke>
+                        <cfoutput>#res1#</cfoutput>
                         <hr>
                         <p>Multiplication 4 arguments using cfinvoke- Multiply (1,2,3,4):</p>
                         <br>
-                        <cfinvoke component="components.multiply" method="multiply" returnvariable="process">
-                            <cfoutput>
+                        <cfinvoke component="components.multiply" method="multiply" returnvariable="res2">                      
                                 <cfinvokeargument name="a" value="1">
                                 <cfinvokeargument name="b" value="2">
                                 <cfinvokeargument name="c" value="3">
-                                <cfinvokeargument name="d" value="4">
-                            </cfoutput>
+                                <cfinvokeargument name="d" value="4">                 
                         </cfinvoke>
+                        <cfoutput>#res1#</cfoutput>
                         <hr>
                         <b>Using Createobject:</b>
                         <p>Multiplication 4 arguments Multiply (1,2,3,4):</p>
                         <br>
-                        <cfscript> ob1=CreateObject("component","components.multiply"); ob1.multiply(1,2,3,4); </cfscript>
+                        <cfset newInstance = createObject("component","components.multiply")> 
+                        <cfset calc = newInstance.multiply(1,2,3,4)> 
+                        <cfdump var = #calc#>
                 </div>
            </section>    
         </div>    
