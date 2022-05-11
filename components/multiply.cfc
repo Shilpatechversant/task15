@@ -1,9 +1,9 @@
-<cfcomponent>
-    <cffunction name="multiply" access="public" >
+<cfcomponent name="multiply">
+    <cffunction name="multiply" access="public" output="true">
         <cfset var local.mul=1>
         <cfloop index="i" from="1" to="#ArrayLen(Arguments)#"> 
-            <cfset mul=#mul# * #Arguments[i]#>
+            <cfset local.mul=#mul# * #Arguments[i]#>
         </cfloop> 
-         <cfreturn mul>
+         <cfreturn local.mul>
     </cffunction>
 </cfcomponent>
